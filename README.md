@@ -22,7 +22,9 @@
 
 ![image](https://github.com/grishi09/counterapp/assets/159860959/6ab3b72b-30ce-4691-85d2-3f8c8a417f99)
 
-Step 5: reset
+#Step 5: reset
+
+
 ![image](https://github.com/grishi09/counterapp/assets/159860959/987ce579-73bb-4643-b662-37b6c2fe40e7)
 
 
