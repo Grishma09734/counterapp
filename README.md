@@ -42,7 +42,6 @@ style.css
 
 
 
-![image](https://github.com/grishi09/counterapp/assets/159860959/987ce579-73bb-4643-b662-37b6c2fe40e7)
 
 
 
