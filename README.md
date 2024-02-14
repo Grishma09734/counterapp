@@ -1,5 +1,6 @@
-![counterappp](https://github.com/Grishma09734/counterapp/assets/159860959/05ebf7ab-6be8-4f02-9f8f-77fa267aef44)# counterapp
+# counterapp
 
+![counterappp](https://github.com/Grishma09734/counterapp/assets/159860959/05ebf7ab-6be8-4f02-9f8f-77fa267aef44)
 
 #Step 1: counter increment
 
