@@ -1,88 +1,88 @@
-let counter = 999999; // Default counter limit set to 4 digits
+// Initializing the counter value
+let counter = 999999;
 
-const DISPLAY = document.getElementById("display");
-const ALERT_MESSAGE = document.querySelector(".alert");
+const DISPLAY = document.getElementById('display');//display called 
+const ALERT_EL = document.getElementById('alert');//alert called
+const ERROR_MSG_OUT_OF_MEMORY = 'Out of memory'; //message is display if its cross the limit 999999
+const ERROR_MSG_INVALID_RANGE = 'Zero is the low limit'; //message shown if its decrement below 0000
 
-// Function to add padding at the start of a string
-function addPaddingAtStart(originalString, desiredLength, paddingCharacter) {
-  const paddingLength = Math.max(0, desiredLength - originalString.length);
-  return paddingCharacter.repeat(paddingLength) + originalString;
-}
-
-function addBox() {
-    const SPAN = document.createElement("span");
-    SPAN.classList.add("box");
-    SPAN.innerText = 0;
-    DISPLAY.appendChild(SPAN);
-}
-
-function addBoxesIfNeeded(numToAdd) {
-    for (let i = 0; i < numToAdd; i++) {
-        addBox();
-    }
-}
-
-function removeExcessBoxesIfNeeded(numToRemove) {
-    const spanElements = DISPLAY.children;
-    for (let i = 0; i < numToRemove; i++) {
-        DISPLAY.removeChild(spanElements[spanElements.length - 1]); // Remove the last box element
-    }
-}
-
+//updating Display
 function updateDisplay() {
+    const numberToString = addPaddingAtStart(counter.toString(), 4, '0');//convert counter to string and pad with zeros if necessary 
+    const boxCount = numberToString.length;
     const spanElements = DISPLAY.children;
-    let counterString = addPaddingAtStart(counter.toString(), 4, '0'); // Default to 4 digits
-    const numDigits = counterString.length;
-    
-    // Check if the number of digits exceeds six
-    if (numDigits > 6) {
-        ALERT_MESSAGE.style.display = "block";
-        return;
-    } else {
-        ALERT_MESSAGE.style.display = "none";
-    }
-    
-    // Check if the number of digits exceeds the number of existing boxes
-    if (numDigits > spanElements.length) {
-        const numToAdd = numDigits - spanElements.length;
-        addBoxesIfNeeded(numToAdd);
-    } 
-    // Check if the number of digits is less than the number of existing boxes and less than or equal to 6
-    else if (numDigits < spanElements.length && numDigits <= 6) {
-        const numToRemove = spanElements.length - numDigits;
-        removeExcessBoxesIfNeeded(numToRemove);
+
+    // removing extra box after decrement
+    for (let i = spanElements.length - 1; i >= boxCount; i--) {
+        DISPLAY.removeChild(spanElements[i]);
     }
 
-    // Update the text content of each box element with the counter digits
-    for (let i = 0; i < spanElements.length; i++) {
-        spanElements[i].innerText = counterString[i];
+    //adding a box after a increment 
+    for (let i = 0; i < boxCount; i++) {
+        if (i < spanElements.length) {
+            spanElements[i].innerText = numberToString[i];
+        }
+        else {
+            addBox();//add new box if necessary
+        }
     }
 }
 
+//Increment Function
 function increment() {
-  if (counter >= 999999) {
-    
-      addBoxesIfNeeded(0); // Add  digits when counter reaches 9999
-  }
-  counter++;
-  updateDisplay();
+    const boxCount = DISPLAY.children.length;
+    counter++;
+    if (counter.toString().length === 5 && boxCount === 4) { //showing the length of the box and boxcount 
+        addBox();
+    } else if (counter.toString().length === 6 && boxCount === 5) { //showng the length of the box and boxcount 
+        addBox();
+    } else if (counter.toString().length > 6) { //if the number reached 6 digit then show alert message 
+        ALERT_EL.innerText = ERROR_MSG_OUT_OF_MEMORY;
+        return;
+    }
+    ALERT_EL.innerText = '';
+
+    updateDisplay();
 }
- 
+
+//Adding a Box Function 
+function addBox() {
+    const SPAN = document.createElement('span');
+    SPAN.classList.add('box');
+    SPAN.innerText = 0;
+    DISPLAY.append(SPAN);
+}
+
+//Decrement Function
 function decrement() {
     if (counter === 0) {
-      ALERT_MESSAGE.style.display = "block";
-      return;
-    }
+        ALERT_EL.innerText = ERROR_MSG_INVALID_RANGE;
+        return
+    };
     counter--;
     updateDisplay();
-  }
-  
-
-function reset() {
-  counter = 0;
-  updateDisplay();
 }
 
-function addZeroPaddingToStart() {}
+//reset Function
+function reset() {
+    counter = 0;
+    updateDisplay();
+}
 
-updateDisplay();
+//Function to add padding at the start of a string
+function addPaddingAtStart(originalString, desiredLength, paddingCharacter) {
+    const originalStringLength = originalString.length;
+    const remainingSpace = desiredLength - originalStringLength;
+    if (remainingSpace > 0) {
+        let newString = originalString;
+        for (let i = 0; i < remainingSpace; i++) {
+            newString = paddingCharacter + newString;
+        }
+        return newString
+    }
+    return originalString;
+}
+
+
+
+updateDisplay();//calling function
