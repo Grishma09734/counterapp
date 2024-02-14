@@ -17,8 +17,7 @@ style.css
 #Step 1: Display
 
 
-
-![step1](https://github.com/Grishma09734/counterapp/assets/159860959/c0a92f8b-696c-4a05-a53d-4da1d5bbe3ae)
+![step1 (2)](https://github.com/Grishma09734/counterapp/assets/159860959/ae65f5e2-48b2-45af-92ee-7496d25fb133)
 
 
 #Step 2: increment 0f counter 
@@ -31,20 +30,13 @@ style.css
 #Step 3: Alert out of memory 
 
 
-![steps](https://github.com/Grishma09734/counterapp/assets/159860959/44e78452-44d8-41d9-84d2-e35a37be71ce)
+![steps (2)](https://github.com/Grishma09734/counterapp/assets/159860959/460b7cde-0dfa-4e90-8e3a-988c0d02a6ee)
+
 
 
 
 #Step 4: Error Message
 
 
-
-![step](https://github.com/Grishma09734/counterapp/assets/159860959/6c3b46d6-d4f6-442b-bc76-f414df532522)
-
-
-
-
-
-
-
+![step (2)](https://github.com/Grishma09734/counterapp/assets/159860959/09ef1bf2-9b8c-41b9-988f-5b93d88aa119)
 
