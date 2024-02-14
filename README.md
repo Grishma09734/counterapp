@@ -14,30 +14,32 @@ style.css
 ![carbon (4)](https://github.com/Grishma09734/counterapp/assets/159860959/2f9aa539-08c4-4a3e-8e00-0001e94230d2)
 
 
-#Step 1: counter increment
+#Step 1: Display
 
 
 
-![image](https://github.com/grishi09/counterapp/assets/159860959/a1c96602-195a-4c21-9ab1-cf1cd59c7382)
+![step1](https://github.com/Grishma09734/counterapp/assets/159860959/c0a92f8b-696c-4a05-a53d-4da1d5bbe3ae)
 
 
-#Step 2: increment 0f 10000
+#Step 2: increment 0f counter 
 
 
 
-![image](https://github.com/grishi09/counterapp/assets/159860959/7c14a1b5-f513-416e-8e7f-f73db9dc08e7)
+![image](https://github.com/Grishma09734/counterapp/assets/159860959/51263aec-7610-40d6-85e8-e9f512effa3d)
+
 
 #Step 3: Alert out of memory 
 
 
-![image](https://github.com/grishi09/counterapp/assets/159860959/a1caa2d0-304c-4701-a08a-3a671fa32199)
-
-#Step 4: counter decrement
+![steps](https://github.com/Grishma09734/counterapp/assets/159860959/44e78452-44d8-41d9-84d2-e35a37be71ce)
 
 
-![image](https://github.com/grishi09/counterapp/assets/159860959/6ab3b72b-30ce-4691-85d2-3f8c8a417f99)
+#Step 4: Error Message
 
-#Step 5: reset
+
+![step](https://github.com/Grishma09734/counterapp/assets/159860959/6c3b46d6-d4f6-442b-bc76-f414df532522)
+
+
 
 
 ![image](https://github.com/grishi09/counterapp/assets/159860959/987ce579-73bb-4643-b662-37b6c2fe40e7)
